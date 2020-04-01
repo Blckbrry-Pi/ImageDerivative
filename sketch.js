@@ -3,20 +3,20 @@ let imageDerivative;
 let derivativeOfDerivative;
 
 function preload() {
-  rawImage = loadImage('data/ImageIn.jpg');
-  imageDerivative = loadImage('data/ImageIn.jpg');
-  derivativeOfDerivative = loadImage('data/ImageIn.jpg');
+  rawImage = loadImage('ImageIn.jpg');
+  imageDerivative = loadImage('ImageIn.jpg');
+  derivativeOfDerivative = loadImage('ImageIn.jpg');
 }
 
 function setup() {
-  createCanvas(1536, 512);
+  createCanvas(2724, 1080);
   
   image(rawImage, 0, 0);
   getDerivative(imageDerivative);
-  image(imageDerivative, 512, 0);
-  getDerivative(derivativeOfDerivative)
+  image(imageDerivative, 908, 0);
   getDerivative(derivativeOfDerivative);
-  image(derivativeOfDerivative, 1024, 0);
+  getDerivative(derivativeOfDerivative);
+  image(derivativeOfDerivative, 1816, 0);
   // Apply gray filter to the whole canvas
 }
 
@@ -58,7 +58,7 @@ function getDerivative(img, steps) {
       let bchange = blue(clr) * 3 - blue(clrx) - blue(clry) - blue(clrxy);
       
       
-      setColorAtIndex(img, x, y, color(rchange, gchange, bchange));
+      setColorAtIndex(img, x, y, color(Math.abs(rchange), Math.abs(gchange), Math.abs(bchange)));
     }
   }
 
