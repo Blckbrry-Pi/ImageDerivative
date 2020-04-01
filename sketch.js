@@ -3,9 +3,9 @@ let imageDerivative;
 let derivativeOfDerivative;
 
 function preload() {
-  rawImage = loadImage('ImageIn.jpg');
-  imageDerivative = loadImage('ImageIn.jpg');
-  derivativeOfDerivative = loadImage('ImageIn.jpg');
+  rawImage = loadImage('ImageIn.png');
+  imageDerivative = loadImage('ImageIn.png');
+  derivativeOfDerivative = loadImage('ImageIn.png');
 }
 
 function setup() {
